@@ -19,7 +19,7 @@
 </header>
 
 <h2>Add user</h2>
-<form th:action="@{/adduser}" th:object="${user}" method="post" class="fw-bold text-center">
+<form th:action="@{/admin/adduser}" th:object="${user}" method="post" class="fw-bold text-center">
     <label for="formFirstName" class="form-label mb-0">First name</label><br>
     <input type="text" class="form-control card-form" id="formFirstName" name="firstName" placeholder="First name"> <br>
     <label for="formLastName" class="form-label mt-3 mb-0 text-center">Last name</label><br>
