@@ -23,7 +23,7 @@ public class UserController {
 
 
 
-    @GetMapping("/")
+    @GetMapping("")
     public String showUserPage(Model model, Principal principal) {
         model.addAttribute("currentUser", userService.findByUsername(principal.getName()));
         return "user";
