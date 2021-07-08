@@ -14,16 +14,16 @@ import java.security.Principal;
 public class UserController {
 
     private final UserService userService;
-    private final RoleService roleService;
 
-    public UserController(UserService userService, RoleService roleService) {
+
+    public UserController(UserService userService) {
         this.userService = userService;
-        this.roleService = roleService;
+
     }
 
 
 
-    @GetMapping("/")
+    @GetMapping("")
     public String showUserPage(Model model, Principal principal) {
         model.addAttribute("currentUser", userService.findByUsername(principal.getName()));
         return "user";
